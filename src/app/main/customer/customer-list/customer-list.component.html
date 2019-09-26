@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="columns is-centered">
+        <div class="column is-9">
+
+            <div class="columns box">
+                <div class="column is-12">
+
+                    <div class="table-container">
+                        <table class="table is-fullwidth is-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Имя</th>
+                                    <th>Фамилия</th>
+                                    <th>Отчество</th> 
+                                    <th>Моб.Тел.</th>
+                                    <th>Дом.Тел.</th>
+                                    <th>email</th>                 
+                                </tr>
+                            </thead>
+                            <tbody *ngFor="let branch of branches; let i = index">
+                                <tr  class="is-selected: active">
+                                    <td>{{i + 1}}</td>
+                                    <td>{{customer.firstname}}</td>
+                                    <td>{{customer.lastname}}</td>
+                                    <td>{{customer.middlename}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                   
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

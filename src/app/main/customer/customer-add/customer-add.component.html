@@ -1,0 +1,68 @@
+<div class="container">
+        <div class="columns is-centered">
+            <div class="column is-9">
+    
+                
+                    <h4 class="title is-4" style="text-align: center; font-family: cursive">Добавить Клиента</h4>
+
+                <div class="columns box">
+                    <div class="column is-6">
+
+                            <div class="field">
+                                <label class="label">Фамилия</label>
+                                <div class="control">
+                                    <input [(ngModel)]="customer.lastname" class="input is-primary is-rounded" type="text" placeholder="Иванов">
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">Имя</label>
+                                    <div class="control">
+                                        <input [(ngModel)]="customer.firstname"  class="input is-primary is-rounded" type="text" placeholder="Иван">
+                                    </div>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">Отчество</label>
+                                <div class="control">
+                                    <input  [(ngModel)]="customer.middlename" class="input is-primary is-rounded" type="text" placeholder="Иванович">
+                                </div>
+                            </div>
+
+
+
+                    </div>
+                    <div class="column is-6">
+                        
+
+                            <div class="field">
+                                    <label class="label">Моб.Тел.</label>
+                                    <div class="control">
+                                        <input  [(ngModel)]="customer.mobileNumber" class="input is-primary is-rounded" type="tel" placeholder="8 777 654 32 11">
+                                    </div>
+                            </div>
+
+                            <div class="field">
+                                    <label class="label">Дом Тел.</label>
+                                    <div class="control">
+                                        <input  [(ngModel)]="customer.homeNumber" class="input is-primary is-rounded" type="tel" placeholder="8 727 398 76 54">
+                                    </div>
+                            </div>
+
+                            <div class="field">
+                                    <label class="label">Почта</label>
+                                    <div class="control">
+                                        <input  [(ngModel)]="customer.email" class="input is-primary is-rounded" type="email" placeholder="asb@mail.ru">
+                                    </div>
+                            </div>
+
+                            <hr>
+
+                            <button (click)="checkData()">Check</button>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</div>
