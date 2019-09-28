@@ -19,8 +19,8 @@ export class CustomerService {
     })
   }  
 
-  addCustomer(customer:Customer): Observable<string> {
-    return this.http.post<string>(this.apiURL + '/addCustomer', JSON.stringify(customer), this.httpOptions)
+  addCustomer(customer:Customer): Observable<Customer> {
+    return this.http.post<Customer>(this.apiURL + '/addCustomer', JSON.stringify(customer), this.httpOptions)
     .pipe(
         tap(_ => console.log('Category is stored!!!')),
         catchError(this.handleError)

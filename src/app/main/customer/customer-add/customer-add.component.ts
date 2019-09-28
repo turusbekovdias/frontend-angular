@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Customer } from '../../../models/Customer';
+import { Customer } from '../../../models/customer';
 import { CustomerService } from '../../../service/customer.service';
 
 @Component({
@@ -17,10 +17,7 @@ export class CustomerAddComponent{
 
 
   checkData() {
-    this.customerService.addCustomer(this.customer).
-    subscribe((data:any) => {
-        console.log(data);
-    })
+    this.customerService.addCustomer(this.customer).subscribe();
   }
 
 }
