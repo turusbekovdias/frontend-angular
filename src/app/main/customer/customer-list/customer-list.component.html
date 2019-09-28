@@ -18,12 +18,15 @@
                                     <th>email</th>                 
                                 </tr>
                             </thead>
-                            <tbody *ngFor="let branch of branches; let i = index">
+                            <tbody *ngFor="let customer of customers; let i = index">
                                 <tr  class="is-selected: active">
                                     <td>{{i + 1}}</td>
                                     <td>{{customer.firstname}}</td>
                                     <td>{{customer.lastname}}</td>
                                     <td>{{customer.middlename}}</td>
+                                    <td>{{customer.mobileNumber}}</td>
+                                    <td>{{customer.homeNumber}}</td>
+                                    <td>{{customer.email}}</td>
                                 </tr>
                             </tbody>
                         </table>

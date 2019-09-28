@@ -25,7 +25,15 @@ export class CustomerService {
         tap(_ => console.log('Category is stored!!!')),
         catchError(this.handleError)
     )
-    }
+  }
+
+  getListCustomers(): Observable<Customer[]> {
+    return this.http.get<Customer[]>(this.apiURL + '/getListCustomers', this.httpOptions)
+    .pipe(
+        tap(_ => console.log('Category is stored!!!')),
+        catchError(this.handleError)
+    )
+  } 
 
     handleError(error) {
         console.log(error);

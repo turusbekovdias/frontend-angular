@@ -2,30 +2,58 @@
         <div class="columns is-centered">
             <div class="column is-9">
     
+                <h4 class="title is-4" style="text-align: center; font-family: cursive">Добавить Филиал</h4>
+
                 <div class="columns box">
                     <div class="column is-6">
 
                             <div class="field">
-                                <div class="content">
-                                    City
-                                </div>
+                                <label class="label">Город</label>
                                 <div class="control">
                                     <div class="select is-primary">
-                                        <select>
-                                          <option>Almaty</option>
-                                          <option>Astana</option>
-                                          <option>Semey</option>
-                                          <option>Shymkent</option>
-                                          <option>Zaisan</option>
-                                          <option>Kentau</option>
+                                        <select [ngModel]="city">
+                                          <option [ngValue]="chooseCity">Almaty</option>
+                                          <option [ngValue]="chooseCity">Astana</option>
+                                          <option [ngValue]="chooseCity">Semey</option>
+                                          <option [ngValue]="chooseCity">Shymkent</option>
+                                          <option [ngValue]="chooseCity">Zaisan</option>
+                                          <option [ngValue]="chooseCity">Kentau</option>
                                         </select>
                                     </div>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">Найменования</label>
+                                <div class="control">
+                                    <input  [(ngModel)]="name" class="input is-primary is-rounded" type="tel" placeholder="Сайран">
                                 </div>
                             </div>
 
                     </div>
                     <div class="column is-6">
                         
+                        
+                        <div class="field">
+                            <label class="label">Адрес</label>
+                            <div class="control">
+                                <input  [(ngModel)]="addres" class="input is-primary is-rounded" type="tel" placeholder="Сайран">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Номер</label>
+                            <div class="control">
+                                <input  [(ngModel)]="homeNumber" class="input is-primary is-rounded" type="tel" placeholder="8 727 360 55 53">
+                            </div>
+                        </div>
+
+                        <div class="contant" style="margin-top: 50px">
+                            <a class="button is-warning" (click)="checkData()">Проверить</a>
+                            <a class="button is-info"  style="margin-left: 20px">Сохранить</a>
+                        </div>
+                        
+
                     </div>
                 </div>
 

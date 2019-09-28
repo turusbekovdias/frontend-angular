@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { BranchService} from '../../../service/branch.service';
+import { Branch } from '../../../models/branch';
 
 @Component({
   selector: 'branch-list-root',
@@ -14,37 +15,35 @@ export class BranchListComponent{
   branches = [
     {
       "id": 1,
-      "firstname": "Dias",
-      "lastname": "Turusbekov",
-      "middlename": "Erboluly"
+      "name": "Dias",
+      "homeNumber": "4454",
+      "address": "aksay",
+      "city": {
+        "name": 'Almaty'
+      }
     },
     {
       "id": 2,
-      "firstname": "Nurlan",
-      "lastname": "Alkuatov",
-      "middlename": "Berikov"
-    },
-    {
-      "id": 3,
-      "firstname": "Kana",
-      "lastname": "Kanbekov",
-      "middlename": "Kanatovich"
-    },
-    {
-      "id": 4,
-      "firstname": "Aisultan",
-      "lastname": "Aisultanovich",
-      "middlename": "Aisulka"
-    },
-    {
-      "id": 5,
-      "firstname": "Raim",
-      "lastname": "Raimbekov",
-      "middlename": "Raimbekovich"
+      "name": "Sairan",
+      "homeNumber": "8787887",
+      "address": "sairan",
+      "city": {
+        "name": 'Astana'
+      }
     }
   ];
 
-  ngOnInit() {}
+  ngOnInit() {
+    // this.getListofBranches();
+  }
 
+  getListofBranches() {
+    this.branchService.getListBranches().subscribe(
+      (res: Branch[]) => {
+        this.branches = [];
+        // this.branches = res;
+      }
+    );
+  }
 
 }
