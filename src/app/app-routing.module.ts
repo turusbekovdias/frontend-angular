@@ -4,13 +4,15 @@ import { BranchListComponent } from './main/branch/branch-list/branch-list.compo
 import { BranchAddComponent } from './main/branch/branch-add/branch-add.component';
 import { CustomerListComponent } from './main/customer/customer-list/customer-list.component';
 import { CustomerAddComponent } from './main/customer/customer-add/customer-add.component';
+import { GuaranteAddComponent } from '../app/main/guarante/guarante-add/guarante-add.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'branch-list', pathMatch: 'full' },
   { path: 'branch-list', component: BranchListComponent},
   { path: 'branch-add', component: BranchAddComponent},
   { path: 'customer-list', component: CustomerListComponent},
-  { path: 'customer-add', component: CustomerAddComponent}
+  { path: 'customer-add', component: CustomerAddComponent},
+  { path: 'guarante-add', component: GuaranteAddComponent}
 ];
 
 @NgModule({

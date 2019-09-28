@@ -12,6 +12,7 @@ import { CustomerListComponent } from '../app/main/customer/customer-list/custom
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'; 
+import { GuaranteAddComponent } from './main/guarante/guarante-add/guarante-add.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     BranchAddComponent,
     NavigationComponent,
     CustomerAddComponent,
-    CustomerListComponent
+    CustomerListComponent,
+    GuaranteAddComponent
   ],
   imports: [
     BrowserModule,
