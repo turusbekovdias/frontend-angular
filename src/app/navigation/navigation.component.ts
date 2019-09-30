@@ -10,7 +10,7 @@ export class NavigationComponent implements OnInit {
 
   constructor(private router: Router) { }
   
-  title = "REAL Lombard";
+  title = "";
 
   ngOnInit() {
   }
